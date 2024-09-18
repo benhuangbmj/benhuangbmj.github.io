@@ -30,11 +30,6 @@ body {
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
 #app {
   max-width: 1280px;
   margin: 0 auto;
@@ -81,6 +76,9 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+p {
+  text-align: left;
+}
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -93,4 +91,17 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+ul {
+  text-align: left;
+}
+
+.dash-list {
+  list-style-type: none;
+}
+
+.dash-list li::before {
+  content: "- ";
+  color: black;
 }
