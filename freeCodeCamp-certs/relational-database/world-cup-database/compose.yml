@@ -1,0 +1,17 @@
+services:
+    db:
+        image: postgres:17-alpine
+        environment:
+            POSTGRES_USER: freecodecamp
+            POSTGRES_PASSWORD: mysecretpassword
+            POSTGRES_DB: postgres
+        ports:
+            - 5432:5432
+        volumes:
+            - postgres_db:/var/lib/postgresql/
+            - type: bind
+              source: ./
+              target: /app
+
+volumes:
+    postgres_db:
