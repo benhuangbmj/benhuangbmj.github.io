@@ -1,10 +1,10 @@
 services:
     db:
-        image: postgres:17-alpine
+        image: postgres:12-alpine
         environment:
             POSTGRES_USER: freecodecamp
             POSTGRES_PASSWORD: mysecretpassword
-            POSTGRES_DB: postgres
+            POSTGRES_DB: worldcup
         ports:
             - 5432:5432
         volumes:
